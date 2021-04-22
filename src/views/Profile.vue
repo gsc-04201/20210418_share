@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div class="left">
-      <SideNavi/>
+      <SideNavi />
     </div>
     <div class="right">
       <div class="title">
@@ -9,13 +9,13 @@
       </div>
       <div class="profile">
         <div class="flex-profile">
-          <p class="profile-name">{{name}}</p>
+          <p class="profile-name">{{ name }}</p>
           <div @click="edit">
             <button>変更する</button>
           </div>
         </div>
-        <p class="text" v-if="active">{{profile}}</p>
-        <input type="text" v-model="profile" v-else/>
+        <p class="text" v-if="active">{{ profile }}</p>
+        <input type="text" v-model="profile" v-else />
       </div>
       <Message />
     </div>
@@ -52,7 +52,7 @@ export default {
   },
   components: {
     SideNavi,
-    Message
+    Message,
   },
 };
 </script>
@@ -99,5 +99,8 @@ button {
   border-radius: 25px;
   display: block;
   margin: 0 0 0 auto;
+}
+input {
+  color: black;
 }
 </style>

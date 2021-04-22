@@ -4,8 +4,8 @@
     <div class="card">
       <p>ログイン</p>
       <div class="form">
-        <input placeholder="メールアドレス" type="email" v-model="email">
-        <input placeholder="パスワード" type="password" v-model="password">
+        <input placeholder="メールアドレス" type="email" v-model="email" />
+        <input placeholder="パスワード" type="password" v-model="password" />
         <button @click="auth">ログイン</button>
       </div>
     </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import HeaderAuth from '../components/HeaderAuth'
+import HeaderAuth from "../components/HeaderAuth";
 export default {
   data() {
     return {
@@ -34,8 +34,6 @@ export default {
   }
 };
 </script>
-
-
 
 <style scoped>
 button {
@@ -68,7 +66,7 @@ input {
   color: black;
 }
 .form {
-  text-align:center;
+  text-align: center;
 }
 .form button {
   margin-top: 15px;

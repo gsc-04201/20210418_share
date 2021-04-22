@@ -7,20 +7,20 @@
       <div class="title">
         <p>ホーム</p>
       </div>
-      <Message :id="id"/>
+      <Message :id="id" />
       <div class="comment">
         <div class="comment-title">
           <p>コメント</p>
         </div>
-        <div class="message" v-for="(comment,index) in data" :key="index">
+        <div class="message" v-for="(comment, index) in data" :key="index">
           <div class="flex">
-            <p class="name">{{comment.comment_user.name}}</p>
+            <p class="name">{{ comment.comment_user.name }}</p>
           </div>
           <div>
-            <p class="text">{{comment.comment.content}}</p>
+            <p class="text">{{ comment.comment.content }}</p>
           </div>
         </div>
-        <input v-model="content" type="text">
+        <input v-model="content" type="text" />
         <div @click="send">
           <button>コメント</button>
         </div>
@@ -71,8 +71,8 @@ export default {
   },
   components: {
     SideNavi,
-    Message
-  }
+    Message,
+  },
 };
 </script>
 
@@ -96,6 +96,9 @@ export default {
 .title p {
   font-size: 20px;
   font-weight: bold;
+}
+.share-message {
+  border-bottom: 1px solid white;
 }
 .comment-title {
   text-align: center;
@@ -128,7 +131,7 @@ export default {
 }
 button {
   width: 100px;
-  text-align:center;
+  text-align: center;
   padding: 8px 0 10px;
   color: #fff;
   background-color: #5419da;
