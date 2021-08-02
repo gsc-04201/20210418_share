@@ -19,6 +19,7 @@
             @click="
               $router.push({
                 path: '/detail/' + value.item.id,
+                // detailにsheresのidを送る 
                 params: { id: value.item.id },
               })
             "
@@ -101,6 +102,7 @@ export default {
       const shares = await axios.get(
         "https://hidden-refuge-20384.herokuapp.com/api/shares"
       );
+      console.log(shares);
       for (let i = 0; i < shares.data.data.length; i++) {
         await axios
           .get(

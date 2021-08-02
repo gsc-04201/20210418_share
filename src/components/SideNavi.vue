@@ -4,15 +4,20 @@
       <img class="logo" src="../assets/logo.png" />
       <div class="flex icon-field">
         <img class="icon" src="../assets/home.png" />
-        <p>ホーム</p>
+        <p @click="$router.push('/home')">ホーム</p>
+        <!-- <i class="fas fa-dog fa-flip-horizontal	"></i> -->
       </div>
       <div class="flex icon-field">
-        <img class="icon" src="../assets/profile.png" />
-        <p>プロフィール</p>
+        <img class="icon" src="../assets/profile.png"/>
+        <p @click="$router.push('/profile')">プロフィール</p>
       </div>
       <div class="flex icon-field">
         <img class="icon" src="../assets/logout.png" />
-        <p>ログアウト</p>
+        <p @click="$router.push('/')">ログアウト</p>
+      </div>
+      <div class="flex icon-field">
+        <i class="fas fa-users"></i>
+        <p @click="$router.push('/users')">ユーザー情報</p>
       </div>
     </div>
     <ShareMessage/>
@@ -21,7 +26,7 @@
 
 <script>
 import ShareMessage from "../components/ShareMessage";
-export default {
+export default { 
   components: {
     ShareMessage
   }
@@ -48,5 +53,9 @@ export default {
 .icon-field p {
   font-size: 16px;
   padding-left: 15px;
+}
+.fas {
+  width: 25px;
+  font-size: 20px
 }
 </style>
